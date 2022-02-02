@@ -18,9 +18,6 @@ logger.setLevel(logging.INFO)
 
 
 
-
-
-
 class StanBackendEnum(Enum):
     PYSTAN = PyStanBackend
     CMDSTANPY = CmdStanPyBackend
@@ -31,9 +28,6 @@ class StanBackendEnum(Enum):
             return StanBackendEnum[name].value
         except KeyError as e:
             raise ValueError("Unknown stan backend: {}".format(name)) from e
-
-
-
 
 
 
